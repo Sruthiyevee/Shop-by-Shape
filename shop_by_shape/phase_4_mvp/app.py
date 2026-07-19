@@ -138,10 +138,27 @@ def apply_custom_css():
                 font-size: 0.95rem;
                 margin-bottom: 1rem;
             }
+            .stepper-container {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
             .step-pill {
-                flex: 1 1 calc(50% - 0.5rem);
-                min-width: 110px;
-                padding: 0.4rem 0.3rem;
+                flex: 1 1 100%;
+                width: 100%;
+                text-align: left;
+                padding: 0.6rem 1rem;
+                border-radius: 0.5rem;
+                font-size: 0.9rem;
+            }
+            .step-pill::after {
+                content: " ▾";
+                float: right;
+                opacity: 0.6;
+            }
+            .step-pill.active::after {
+                content: " ▴";
+                float: right;
+                opacity: 1;
             }
             div[data-baseweb="tab-list"] {
                 flex-wrap: wrap !important;
@@ -160,29 +177,29 @@ def apply_custom_css():
 
 
 def render_stepper_header(current_step: int):
-    """Renders a 100% non-overflowing multi-step progress bar and responsive stepper cards."""
+    """Renders a responsive stepper bar without numbers that converts to an accordion list on mobile viewports."""
     steps = [
-        ("1. Assessment", "Body Shape Evaluation"),
-        ("2. Skin Tone", "Palette & Occasion"),
-        ("3. Style Profile", "Calculated Guidelines"),
-        ("4. Recommendations", "Copyable Search Terms")
+        "Assessment",
+        "Skin Tone",
+        "Style Profile",
+        "Recommendations"
     ]
 
     # Visual progress bar line (25%, 50%, 75%, 100%)
     st.progress(current_step / 4.0)
 
     pills_list = []
-    for idx, (title, sub) in enumerate(steps, start=1):
+    for idx, title in enumerate(steps, start=1):
         active_cls = "active" if idx == current_step else ""
         pills_list.append(
             f'<div class="step-pill {active_cls}">'
-            f'<div class="step-num">Step {idx}</div>'
             f'<div class="step-title">{title}</div>'
             f'</div>'
         )
 
     pills_html = f'<div class="stepper-container">{"".join(pills_list)}</div>'
     st.markdown(pills_html, unsafe_allow_html=True)
+
 
 
 
@@ -225,7 +242,7 @@ def main():
     # STEP 1: GENDER & BODY ASSESSMENT ONBOARDING
     # ==========================================
     if current_step == 1:
-        st.markdown("### Step 1: Body Shape Assessment")
+        st.markdown("### Body Shape Assessment")
         st.caption("Select your target gender fit and choose your preferred body shape evaluation method.")
 
         col_opt1, col_opt2 = st.columns(2)
@@ -274,7 +291,7 @@ def main():
     # STEP 2: SKIN TONE & OCCASION SELECTION
     # ==========================================
     elif current_step == 2:
-        st.markdown("### Step 2: Select Skin Tone & Occasion")
+        st.markdown("### Skin Tone & Occasion Selection")
         st.caption("Choose your skin tone undertone and target wearing occasion.")
 
         col_st1, col_st2 = st.columns(2)
@@ -339,7 +356,7 @@ def main():
     # STEP 3: STYLE PROFILE & STYLE SUGGESTIONS
     # ==========================================
     elif current_step == 3:
-        st.markdown("### Step 3: Personalized Style Profile & Style Suggestions")
+        st.markdown("### Personalized Style Profile & Style Suggestions")
         st.caption("Review your calculated body shape profile, flattering color palette, and personalized style suggestions.")
 
         current_shape = st.session_state.get("calculated_shape", "Pear" if st.session_state["gender"] == "female" else "Trapezoid")
@@ -403,7 +420,8 @@ def main():
     # STEP 4: SEARCHABLE RECOMMENDATIONS & OUTFITS
     # ==========================================
     elif current_step == 4:
-        st.markdown("### Step 4: Searchable Dress & Outfit Recommendations")
+        st.markdown("### Searchable Dress & Outfit Recommendations")
+
         st.caption("Copy 1-click search terms (e.g. Cobalt Blue Boat-Neck Gown) to search on Amazon, Myntra, ASOS, or Google Shopping.")
 
         current_shape = st.session_state.get("calculated_shape", "Pear" if st.session_state["gender"] == "female" else "Trapezoid")
