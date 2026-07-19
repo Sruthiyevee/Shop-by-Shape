@@ -105,14 +105,46 @@ def apply_custom_css():
             font-size: 0.9rem;
             font-weight: 600;
             margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        /* Hide sidebar completely */
+            /* Hide sidebar completely */
         [data-testid="stSidebar"] {
             display: none;
         }
+
+        /* Mobile & Tablet Responsive Media Queries */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 1.75rem;
+            }
+            .subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+            }
+            .stepper-container {
+                flex-direction: column;
+                gap: 0.35rem;
+                padding: 0.5rem;
+            }
+            .step-pill {
+                text-align: left;
+                padding: 0.4rem 0.75rem;
+                font-size: 0.85rem;
+            }
+            /* Make Streamlit Tabs wrap cleanly on mobile without horizontal scroll truncation */
+            div[data-baseweb="tab-list"] {
+                flex-wrap: wrap !important;
+                gap: 0.25rem !important;
+            }
+            button[data-baseweb="tab"] {
+                font-size: 0.82rem !important;
+                padding: 0.4rem 0.5rem !important;
+                flex: 1 1 auto !important;
+                text-align: center !important;
+                white-space: normal !important;
+            }
+        }
         </style>
     """, unsafe_allow_html=True)
+
 
 
 def render_stepper_header(current_step: int):
