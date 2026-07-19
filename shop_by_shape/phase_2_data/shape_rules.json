@@ -1,0 +1,175 @@
+{
+  "women": {
+    "pear": {
+      "aka": ["triangle"],
+      "traits": "Hips wider than bust/shoulders, defined waist, narrower upper body.",
+      "goal": "Balance lower body volume, add width/interest up top.",
+      "recommended": {
+        "tops": ["boat neck", "off-shoulder", "puff sleeve", "embellished/detailed necklines", "structured shoulders", "horizontal stripes on top"],
+        "bottoms": ["straight leg trousers", "dark wash bootcut jeans", "A-line skirts in solid dark tones", "wide-leg trousers"],
+        "dresses": ["fit-and-flare with detailing on bodice", "A-line dress with statement sleeves/neckline", "wrap dress", "empire waist dress"],
+        "outerwear": ["structured blazers ending at hip", "cropped jackets"],
+        "avoid": ["skinny bottoms with plain tight tops", "tapered pants with baggy tops", "hip-heavy embellishment (patch pockets, pleats at hip)"]
+      },
+      "occasion_notes": {
+        "formal": "A-line gown or fit-and-flare dress with statement neckline/sleeve, minimal skirt detailing.",
+        "casual": "Boat-neck top + straight leg jeans + statement earrings.",
+        "party": "Off-shoulder top + dark A-line skirt or fit-and-flare dress."
+      }
+    },
+    "apple": {
+      "aka": ["round", "oval"],
+      "traits": "Fuller midsection/bust, less defined waist, slimmer legs.",
+      "goal": "Create vertical line, define waist softly, draw eye to legs/neckline.",
+      "recommended": {
+        "tops": ["V-neck", "empire waist tops", "wrap tops", "single-breasted structured jackets", "tunics that skim (not cling)"],
+        "bottoms": ["straight or bootcut trousers", "dark denim, mid-rise", "tailored trousers"],
+        "dresses": ["empire waist dress", "A-line dress with V-neck", "wrap dress", "fit-and-flare with defined under-bust seam"],
+        "outerwear": ["open-front cardigans/blazers to elongate", "single-button blazers that hit just below waist"],
+        "avoid": ["tight-fitting tops that cling to midsection", "high necklines with heavy detail", "belts cinched tightly at natural waist"]
+      },
+      "occasion_notes": {
+        "formal": "Empire-waist gown, V-neckline, flowing skirt.",
+        "casual": "Wrap top + straight leg jeans, statement necklace to draw eye up.",
+        "party": "Fit-and-flare dress with V-neck and under-bust definition."
+      }
+    },
+    "hourglass": {
+      "aka": [],
+      "traits": "Bust and hips balanced, well-defined waist.",
+      "goal": "Highlight waist, maintain balance, avoid hiding shape.",
+      "recommended": {
+        "tops": ["fitted wrap tops", "belted blouses", "bodycon-friendly knits", "tailored shirts nipped at waist"],
+        "bottoms": ["high-waisted straight/skinny trousers", "pencil skirts", "high-waisted jeans"],
+        "dresses": ["wrap dress", "bodycon dress", "belted fit-and-flare", "sheath dress"],
+        "outerwear": ["belted trench/coat", "fitted blazers"],
+        "avoid": ["boxy oversized silhouettes that hide the waist", "shapeless shifts", "drop-waist dresses"]
+      },
+      "occasion_notes": {
+        "formal": "Belted or fitted sheath/mermaid gown that follows the waistline.",
+        "casual": "Wrap top + high-waisted jeans, thin belt.",
+        "party": "Bodycon or wrap dress with waist definition."
+      }
+    },
+    "rectangle": {
+      "aka": ["straight", "banana"],
+      "traits": "Bust, waist, hips similarly aligned, minimal waist definition.",
+      "goal": "Create the illusion of curves and a defined waist.",
+      "recommended": {
+        "tops": ["peplum tops", "ruffled/detailed blouses", "cropped jackets", "belted tops"],
+        "bottoms": ["flared/wide-leg trousers", "pleated skirts", "jeans with back-pocket detailing for curve illusion"],
+        "dresses": ["fit-and-flare dress", "belted shift dress", "peplum dress", "dress with waist seam and skirt volume"],
+        "outerwear": ["belted coats", "peplum-hem blazers"],
+        "avoid": ["straight shift dresses with no waist seam", "boxy unstructured tops paired with straight bottoms"]
+      },
+      "occasion_notes": {
+        "formal": "Belted gown or peplum-detail dress to create waist illusion.",
+        "casual": "Peplum top + wide-leg jeans.",
+        "party": "Fit-and-flare dress with waist seam and volume skirt."
+      }
+    },
+    "inverted_triangle": {
+      "aka": ["apple-shoulder", "athletic"],
+      "traits": "Shoulders/bust broader than hips.",
+      "goal": "Soften shoulder line, add volume/interest below waist.",
+      "recommended": {
+        "tops": ["V-neck", "scoop neck", "simple sleeves (no shoulder padding)", "dark solid tops"],
+        "bottoms": ["A-line/full skirts", "wide-leg or flared trousers", "patterned or light-wash bottoms"],
+        "dresses": ["A-line dress with simple bodice", "fit-and-flare with volume skirt", "dress with detail/pattern at hem"],
+        "outerwear": ["fitted jackets without shoulder pads", "open cardigans"],
+        "avoid": ["shoulder pads, puff sleeves, boat necks", "embellished/bright tops with plain bottoms"]
+      },
+      "occasion_notes": {
+        "formal": "A-line gown, simple bodice, volume in the skirt.",
+        "casual": "V-neck top + flared jeans or A-line skirt.",
+        "party": "Fit-and-flare dress with plain top half, detailed hem."
+      }
+    }
+  },
+  "men": {
+    "trapezoid": {
+      "aka": [],
+      "traits": "Shoulders broader than waist, athletic/balanced build — considered the benchmark shape.",
+      "goal": "Maintain balance, fitted (not baggy) silhouettes work well.",
+      "recommended": {
+        "tops": ["fitted/tailored shirts", "crew or V-neck tees", "structured blazers"],
+        "bottoms": ["straight or slim-fit trousers/jeans"],
+        "suits": ["classic fitted two-piece suit, single or double breasted both work"],
+        "avoid": ["overly baggy fits that hide the natural shoulder-to-waist taper"]
+      },
+      "occasion_notes": {
+        "formal": "Fitted two-piece suit, minimal padding needed.",
+        "casual": "Fitted tee/shirt + straight jeans.",
+        "party": "Slim shirt (solid or subtle pattern) + tailored trousers."
+      }
+    },
+    "inverted_triangle": {
+      "aka": [],
+      "traits": "Broad shoulders/chest, narrower waist and hips.",
+      "goal": "Balance the upper body, avoid excess shoulder emphasis.",
+      "recommended": {
+        "tops": ["V-neck or crew neck (avoid boat neck/wide collars)", "minimal shoulder seam detail"],
+        "bottoms": ["straight-leg or slightly relaxed trousers to add lower-body volume", "jeans with some leg volume, not skinny"],
+        "suits": ["single-breasted jacket, natural shoulder (no heavy padding)"],
+        "avoid": ["shoulder pads, epaulettes, horizontal stripes across chest", "skinny-fit trousers that exaggerate the taper"]
+      },
+      "occasion_notes": {
+        "formal": "Single-breasted suit, natural shoulder line, straight trouser.",
+        "casual": "Plain V-neck tee + straight-leg jeans.",
+        "party": "Solid-color shirt, untucked or half-tucked, straight trousers."
+      }
+    },
+    "rectangle": {
+      "aka": ["straight"],
+      "traits": "Shoulders, waist, hips similarly aligned, minimal definition.",
+      "goal": "Create the illusion of structure and shoulder-to-waist taper.",
+      "recommended": {
+        "tops": ["layering (jacket over tee)", "structured shirts with chest pockets/detailing", "horizontal stripes to add width"],
+        "bottoms": ["straight-fit trousers/jeans"],
+        "suits": ["structured shoulder, slightly tapered waist jacket"],
+        "avoid": ["fully unstructured, boxy fits with no shape at all"]
+      },
+      "occasion_notes": {
+        "formal": "Structured-shoulder suit with tapered waist for definition.",
+        "casual": "Layered jacket/overshirt + tee + straight jeans.",
+        "party": "Textured or patterned shirt to add visual dimension."
+      }
+    },
+    "triangle": {
+      "aka": ["pear", "spoon"],
+      "traits": "Waist/hips wider than shoulders/chest.",
+      "goal": "Broaden shoulders visually, keep lower half streamlined.",
+      "recommended": {
+        "tops": ["structured shoulders", "horizontal stripes on chest", "light/bright colors or patterns up top", "layering with jackets"],
+        "bottoms": ["straight or slim dark trousers/jeans (no pleats, no tapering that clings to hips)"],
+        "suits": ["padded/structured shoulder jacket, darker trouser"],
+        "avoid": ["skinny jeans that emphasize hip width", "plain dark tops with bright/patterned bottoms"]
+      },
+      "occasion_notes": {
+        "formal": "Structured-shoulder suit jacket, dark slim (not skinny) trouser.",
+        "casual": "Striped or patterned shirt + straight dark jeans.",
+        "party": "Bright/patterned shirt on top, solid dark trousers."
+      }
+    },
+    "oval": {
+      "aka": ["round"],
+      "traits": "Fuller midsection, less waist definition.",
+      "goal": "Elongate the torso, avoid clinging fabrics at midsection.",
+      "recommended": {
+        "tops": ["vertical stripes", "open jackets/cardigans worn unbuttoned", "shirts with a straight hem worn untucked", "darker solid colors on top"],
+        "bottoms": ["straight-fit trousers, mid-rise (not low-rise which emphasizes midsection)"],
+        "suits": ["single-breasted, notch lapel, one-button jacket to elongate torso"],
+        "avoid": ["tight/clingy fabrics at the waist", "double-breasted jackets buttoned up", "horizontal stripes across the midsection", "tucked-in tight shirts"]
+      },
+      "occasion_notes": {
+        "formal": "Single-button, notch-lapel suit, vertical pinstripe if patterned.",
+        "casual": "Untucked straight-hem shirt + mid-rise straight trousers.",
+        "party": "Open jacket/cardigan over solid dark tee, straight trousers."
+      }
+    }
+  },
+  "usage_notes": {
+    "purpose": "Deterministic lookup table for shape -> recommended/avoid garment logic. Use as ground truth for filtering the mock clothing catalog and for validating/constraining any LLM-generated styling copy (rationale text only, not the recommendation itself).",
+    "extend_with": ["color_palette per skin tone (separate table)", "occasion tag per catalog item", "fabric/pattern tags per catalog item for finer matching"]
+  }
+}

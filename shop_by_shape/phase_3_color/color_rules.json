@@ -1,0 +1,44 @@
+{
+  "warm": {
+    "name": "Warm Undertone (Golden/Yellow/Peach)",
+    "description": "Skin with golden, yellow, or peachy undertones. Looks best in earthy, rich, and warm hues.",
+    "recommended_colors": ["Earthy Red", "Mustard Yellow", "Coral", "Olive Green", "Warm Brown", "Cream", "Terracotta", "Gold", "Peach"],
+    "neutral_colors": ["Warm Beige", "Camel", "Off-White", "Khaki"],
+    "colors_to_avoid": ["Icy Blue", "Stark Cold Silver", "Magenta", "Electric Neon"]
+  },
+  "cool": {
+    "name": "Cool Undertone (Pink/Blue/Red)",
+    "description": "Skin with pink, rosy, or bluish undertones. Looks best in jewel tones and crisp, cool colors.",
+    "recommended_colors": ["Emerald Green", "Royal Blue", "Sapphire", "Ruby Red", "Deep Purple", "Crisp White", "Magenta", "Silver", "Plum"],
+    "neutral_colors": ["Charcoal Gray", "Navy", "Crisp White", "Slate"],
+    "colors_to_avoid": ["Orange", "Mustard Yellow", "Yellow-Green", "Warm Golden Brown"]
+  },
+  "neutral": {
+    "name": "Neutral Undertone (Balanced)",
+    "description": "Balanced undertones that suit a wide mix of warm and cool shades.",
+    "recommended_colors": ["Dusty Rose", "Jade Green", "Soft Teal", "Champagne", "Taupe", "Medium Blue", "Soft Peach", "Blush Pink"],
+    "neutral_colors": ["Soft Navy", "Heather Gray", "Off-White", "Taupe"],
+    "colors_to_avoid": ["Overly harsh neon tones", "Muddy brown"]
+  },
+  "deep": {
+    "name": "Deep / Dark Skin Tone",
+    "description": "Rich deep skin tones that pop against vibrant, high-contrast, bold colors and warm metallics.",
+    "recommended_colors": ["Cobalt Blue", "Bright Yellow", "Hot Pink", "Emerald", "Tangerine Orange", "Gold", "Stark White", "Rich Purple"],
+    "neutral_colors": ["Black", "Pure White", "Cream", "Dark Chocolate"],
+    "colors_to_avoid": ["Dull muddy gray", "Washed-out beige", "Faded pastels"]
+  },
+  "fair": {
+    "name": "Fair / Light Skin Tone",
+    "description": "Fair complexions that look radiant in jewel tones, soft pastels, and deep contrasting shades.",
+    "recommended_colors": ["Jewel Red", "Soft Navy", "Dusty Pink", "Lavender", "Emerald", "Soft Teal", "Burgundy"],
+    "neutral_colors": ["Soft Gray", "Navy", "Charcoal", "Soft Ivory"],
+    "colors_to_avoid": ["Pale nude beige", "Washed-out yellow", "Harsh neon green"]
+  },
+  "medium_olive": {
+    "name": "Medium / Olive Skin Tone",
+    "description": "Medium skin with olive or golden undertones that shine in rich earth tones and jewel hues.",
+    "recommended_colors": ["Burgundy", "Teal", "Plum", "Warm Terracotta", "Bronze", "Forest Green", "Rich Ochre"],
+    "neutral_colors": ["Warm Gray", "Cream", "Olive", "Espresso"],
+    "colors_to_avoid": ["Pastel yellow", "Pale pink", "Cool ice blue"]
+  }
+}
