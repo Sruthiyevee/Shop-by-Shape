@@ -9,33 +9,51 @@ from .env file (GROQ_API_KEY).
 import os
 import json
 import requests
-from typing import Dict, Optional
-from dotenv import load_dotenv
-
 # Find and load .env file from project root or current working directory
 module_dir = os.path.dirname(os.path.abspath(__file__))
 project_dir = os.path.abspath(os.path.join(module_dir, ".."))
 env_path = os.path.join(project_dir, ".env")
 
-if os.path.exists(env_path):
-    load_dotenv(env_path)
-else:
-    load_dotenv()
+try:
+    from dotenv import load_dotenv
+    if os.path.exists(env_path):
+        load_dotenv(env_path)
+    else:
+        load_dotenv()
+except Exception:
+    pass
+
 
 GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
 
 
 def get_groq_api_key() -> Optional[str]:
-    """Retrieve Groq API key from environment variables."""
+    """Retrieve Groq API key from environment variables or Streamlit secrets."""
     key = os.getenv("GROQ_API_KEY")
-    if not key or key.strip() in ["gsk_your_groq_api_key_here", "your_groq_api_key_here"]:
+    if not key:
+        try:
+            import streamlit as st
+            if "GROQ_API_KEY" in st.secrets:
+                key = st.secrets["GROQ_API_KEY"]
+        except Exception:
+            pass
+    if not key or str(key).strip() in ["gsk_your_groq_api_key_here", "your_groq_api_key_here"]:
         return None
-    return key.strip()
+    return str(key).strip()
 
 
 def get_groq_model() -> str:
-    """Retrieve Groq model name from environment variables."""
-    return os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile").strip()
+    """Retrieve Groq model name from environment variables or Streamlit secrets."""
+    model = os.getenv("GROQ_MODEL")
+    if not model:
+        try:
+            import streamlit as st
+            if "GROQ_MODEL" in st.secrets:
+                model = st.secrets["GROQ_MODEL"]
+        except Exception:
+            pass
+    return (model or "llama-3.3-70b-versatile").strip()
+
 
 
 def generate_fallback_enrichment(shape: str, gender: str = "female", occasion: Optional[str] = None) -> Dict:
