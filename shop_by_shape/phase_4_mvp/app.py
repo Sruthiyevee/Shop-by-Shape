@@ -171,17 +171,19 @@ def render_stepper_header(current_step: int):
     # Visual progress bar line (25%, 50%, 75%, 100%)
     st.progress(current_step / 4.0)
 
-    pills_html = '<div class="stepper-container">'
+    pills_list = []
     for idx, (title, sub) in enumerate(steps, start=1):
         active_cls = "active" if idx == current_step else ""
-        pills_html += f'''
-            <div class="step-pill {active_cls}">
-                <div class="step-num">Step {idx}</div>
-                <div class="step-title">{title}</div>
-            </div>
-        '''
-    pills_html += '</div>'
+        pills_list.append(
+            f'<div class="step-pill {active_cls}">'
+            f'<div class="step-num">Step {idx}</div>'
+            f'<div class="step-title">{title}</div>'
+            f'</div>'
+        )
+
+    pills_html = f'<div class="stepper-container">{"".join(pills_list)}</div>'
     st.markdown(pills_html, unsafe_allow_html=True)
+
 
 
 
