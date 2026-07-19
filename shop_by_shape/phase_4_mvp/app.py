@@ -46,25 +46,42 @@ def apply_custom_css():
         }
         .stepper-container {
             display: flex;
-            justify-content: space-between;
-            background-color: #F3F4F6;
-            padding: 0.75rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: rgba(243, 244, 246, 0.05);
+            padding: 0.5rem;
             border-radius: 0.75rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
         .step-pill {
-            flex: 1;
+            flex: 1 1 calc(25% - 0.5rem);
+            min-width: 130px;
+            box-sizing: border-box;
             text-align: center;
-            padding: 0.5rem;
+            padding: 0.5rem 0.4rem;
             border-radius: 0.5rem;
-            font-weight: 600;
-            font-size: 0.95rem;
-            color: #4B5563;
+            font-size: 0.85rem;
+            color: #9CA3AF;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .step-pill.active {
             background-color: #4F46E5;
             color: #FFFFFF;
-            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+            border-color: #4F46E5;
+            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
+        }
+        .step-num {
+            font-size: 0.72rem;
+            opacity: 0.85;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .step-title {
+            font-weight: 700;
+            font-size: 0.88rem;
         }
         .shape-badge {
             display: inline-block;
@@ -105,7 +122,9 @@ def apply_custom_css():
             font-size: 0.9rem;
             font-weight: 600;
             margin-right: 0.5rem;
-            /* Hide sidebar completely */
+            margin-bottom: 0.5rem;
+        }
+        /* Hide sidebar completely */
         [data-testid="stSidebar"] {
             display: none;
         }
@@ -119,17 +138,11 @@ def apply_custom_css():
                 font-size: 0.95rem;
                 margin-bottom: 1rem;
             }
-            .stepper-container {
-                flex-direction: column;
-                gap: 0.35rem;
-                padding: 0.5rem;
-            }
             .step-pill {
-                text-align: left;
-                padding: 0.4rem 0.75rem;
-                font-size: 0.85rem;
+                flex: 1 1 calc(50% - 0.5rem);
+                min-width: 110px;
+                padding: 0.4rem 0.3rem;
             }
-            /* Make Streamlit Tabs wrap cleanly on mobile without horizontal scroll truncation */
             div[data-baseweb="tab-list"] {
                 flex-wrap: wrap !important;
                 gap: 0.25rem !important;
@@ -146,22 +159,30 @@ def apply_custom_css():
     """, unsafe_allow_html=True)
 
 
-
 def render_stepper_header(current_step: int):
-    """Renders visual multi-step progress stepper bar."""
+    """Renders a 100% non-overflowing multi-step progress bar and responsive stepper cards."""
     steps = [
-        "1. Body Assessment",
-        "2. Skin Tone & Occasion",
-        "3. Profile & Style Suggestions",
-        "4. Recommendations"
+        ("1. Assessment", "Body Shape Evaluation"),
+        ("2. Skin Tone", "Palette & Occasion"),
+        ("3. Style Profile", "Calculated Guidelines"),
+        ("4. Recommendations", "Copyable Search Terms")
     ]
 
+    # Visual progress bar line (25%, 50%, 75%, 100%)
+    st.progress(current_step / 4.0)
+
     pills_html = '<div class="stepper-container">'
-    for idx, step_name in enumerate(steps, start=1):
+    for idx, (title, sub) in enumerate(steps, start=1):
         active_cls = "active" if idx == current_step else ""
-        pills_html += f'<div class="step-pill {active_cls}">{step_name}</div>'
+        pills_html += f'''
+            <div class="step-pill {active_cls}">
+                <div class="step-num">Step {idx}</div>
+                <div class="step-title">{title}</div>
+            </div>
+        '''
     pills_html += '</div>'
     st.markdown(pills_html, unsafe_allow_html=True)
+
 
 
 def main():
